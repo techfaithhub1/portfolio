@@ -35,11 +35,13 @@ const About = () => {
                                              <p><b>Current Address:- </b> Indore M.P.</p>
                                              <p><b>Contact:- </b> +916265188287</p>
                                              <p><b>Email:- </b> techfaithhub@gmail.com</p>
-                                             <p><b>GitHub:- </b> <a target="blank" href="https://github.com/techfaithhubcontact1/">Open GitHub</a></p>
+                                             <p><b>GitHub:- </b> <a target="blank" href="https://github.com/techfaithhub1/">Open GitHub</a></p>
                                         </div>
                                    </div>
                                    <div className="modal-footer">
-                                        <button type="button" className="btn btn-primary">Download CV</button>
+                                        <button type="button" className="btn btn-primary">
+                                             <a target="blank" href="https://drive.google.com/file/d/1e3MDr_-NkJxBgLw1g8APkbcdOKftDzk8/view">Download CV</a>
+                                        </button>
                                    </div>
                               </div>
                          </div>

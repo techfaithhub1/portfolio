@@ -41,7 +41,7 @@ const Contact = () => {
           <div id="contact" className="container-fluid container-lg container-sm">
                <h1>Contact With Me</h1>
                <div className="row contact_content">
-                    <div className="col-lg-5 col-md-5 col-sm-10 img_info_elm">
+                    <div className="col-lg-5 col-md-6 col-sm-10 img_info_elm">
                          <div className="f_img_elm">
                               <img src={contactImg} alt="contact" />
                          </div>
@@ -53,7 +53,7 @@ const Contact = () => {
                               <p><b>Email:- </b> techfaithhub@gmail.com</p>
                          </div>
                     </div>
-                    <div className="col-lg-7 col-md-7 col-sm-10 form_elm">
+                    <div className="col-lg-7 col-md-6 col-sm-10 form_elm">
                          <form onSubmit={onSubmit} className="row">
                               <div className="col-lg-6 mt-3">
                                    <label htmlFor="inputName" className="form-label">Name</label>

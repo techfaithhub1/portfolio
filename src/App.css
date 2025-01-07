@@ -16,6 +16,8 @@ body {
 }
 .navbar .width {
      display: flex;
+     align-items: center;
+     position: relative;
 }
 .navbar .navbar-brand {
      font-weight: 700;
@@ -40,8 +42,24 @@ nav .nav-link:focus {
 .nav_sticky {
      box-shadow: 0px 6px 12px 0px #c8cccf;
 }
-.nav_color {
+nav button {
+     color: #ECF0F3 !important;
+     border: none !important;
+}
+nav button span {
      color: #21dde8 !important;
+}
+nav .cancel {
+     font-size: 22px;
+     font-weight: 900;
+     cursor: pointer;
+     text-align: left;
+     position: absolute;
+     right: 30px;
+     top: 6px;
+}
+.hide {
+     display: none;
 }
 
 /* Home page Styling */
@@ -52,12 +70,10 @@ nav .nav-link:focus {
      background-repeat: no-repeat;
      border-bottom: 0.5px solid #d4d4d4;
      margin-top: 50px;
-     position: relative;
-     padding-bottom: 10px;
+     padding-bottom: 70px;
 }
 
 .banner {
-     height: 90vh;
      margin: 0 auto;
      display: flex;
      align-items: start;
@@ -98,13 +114,25 @@ nav .nav-link:focus {
      padding: 10px 15px 10px 15px;
      transition: all 300ms ease;
      border: none;
-     border-radius: 30px;
+     border-radius: 10px;
 }
 .btn:hover {
      background: linear-gradient(160deg, #21dde8, #21dde8);
      color: #fff;
 }
 .btn:active {
+     color: #fff;
+     transform: scale(0.97);
+}
+.btn a {
+     text-decoration: none;
+     color: #21dde8;
+}
+.btn a:hover {
+     background: linear-gradient(160deg, #21dde8, #21dde8);
+     color: #fff;
+}
+.btn a:active {
      color: #fff;
      transform: scale(0.97);
 }
@@ -123,7 +151,7 @@ nav .nav-link:focus {
      line-height: 40px;
      font-size: 20px;
      text-align: center;
-     border-radius: 50%;
+     border-radius: 8px;
      background: linear-gradient(160deg, #E4E9ED, #FEFEFE);
      box-shadow: -6px -6px 12px 0px #ffffff,  6px 6px 12px 0px #c8cccf;
      color: #21dde8;
@@ -142,7 +170,7 @@ nav .nav-link:focus {
 }
 .banner .skill img {
      width: 35px;
-     border-radius: 100%;
+     border-radius: 8px;
 }
 .banner_img {
      text-align: right;
@@ -154,32 +182,6 @@ nav .nav-link:focus {
      width: 90%;
      border-radius: 10px;
 }
-/* .home_page .arrow {
-     position: sticky;
-     top: 600px;
-     right: 20px;
-     width: 50px;
-     height: 50px;
-     z-index: 30;
-     border-radius: 100%;
-     background: linear-gradient(160deg,#E4EAEE, #FEFEFE);
-     box-shadow: -6px -6px 12px 0px #FEFEFE, 6px 6px 12px 0px #c8cccf;
-     text-align: center;
-     line-height: 50px;
-}
-.home_page .arrow:hover {
-     color: #fff;
-     background-color: #21dde8;
-}
-.arrow a i {
-     color: #21dde8;
-     font-size: 25px;
-     font-weight: bold;
-}
-.arrow a i:hover {
-     color: #fff;
-     background-color: #21dde8;
-} */
 
 /* About page styling  */
 #about, #project, #contact {
@@ -367,24 +369,42 @@ nav .nav-link:focus {
 }
 
 /* media query  */
-@media (max-width:767px) {
-     .home_page {
-          height: 1120px;
+@media (max-width: 991px) {
+     nav .navbar-collapse {
+          background: linear-gradient(160deg,#e4eaeec2, #fefefec4);
+          box-shadow: -6px -6px 12px 0px #FEFEFE, 6px 6px 12px 0px #c8cccf;
+          padding-inline: 5%;
+          border-radius: 10px;
+     }
+     nav .navbar-collapse ul li {
+          text-align: left;
+     }
+     .navbar-collapse ul li a {
+          color: #1a989e;
+     }
+     #project .project_section {
+          margin-top: 30px;
+     }
+     .project_section .margin {
           margin-top: 20px;
      }
+}
+@media (max-width:767px) {
      .banner {
           justify-content: center;
-          position: relative;
      }
      .banner_text {
-          text-align: center;
-          margin-block: 0px;
-          position: absolute;
-          top: 100%;
-          z-index: 10;
+          margin-top: 30px;
      }
-     .banner_img {
-          position: absolute;
+     .banner_text h1 {
+          margin-block: 16px;
+          color: #1E2125;
+     } 
+     .banner .first_img {
+          display: block;
+     }
+     .banner .last_img {
+          display: none;
      }
 
      #about .content {
@@ -407,8 +427,30 @@ nav .nav-link:focus {
      }
 }
 
-@media (max-width:495px) {
+
+@media (max-width:500px) {
      .about_skills img {
           margin-bottom: 2%;
+     }
+}
+@media (max-width: 420px) {
+     h1, h2 {
+          margin-block: 12px;
+          font-size: 22px;
+     } 
+     h5 {
+          font-size: 16px;
+     }
+     .banner_link {
+          padding-right: none;
+     }
+     .banner .skill {
+          display: none;
+     }
+     .btn {
+          font-size: 18px;
+     }
+     .about_text h2 {
+          margin-top: 30px;
      }
 }

@@ -25,6 +25,9 @@ function Home() {
           <div className="home_page" id="home">
                <div className="container-fluid container-lg">
                     <div className="row banner">
+                         <div className="banner_img col-sm-10 first_img hide">
+                              <img src={image} alt="img" />
+                         </div>
                          <div className="banner_text col-lg-7 col-md-7 col-sm-10">
                               <h5>WELCOME TO MY PORTFOLIO!</h5>
                               <h1>Hi, I&rsquo;m Gulabsing Jamre</h1>
@@ -33,7 +36,9 @@ function Home() {
                                    I am a expertise in modern web technologies like HTML, CSS, JavaScript, and frameworks like React and Bootstrap.
                                    Explore my projects to see how I combine creativity and technical skill to deliver impactful solutions.
                               </p>
-                              <button className="btn btn-md">Download CV</button><br />
+                              <button className="btn btn-md">
+                                   <a target="blank" href="https://drive.google.com/file/d/1e3MDr_-NkJxBgLw1g8APkbcdOKftDzk8/view">Download CV</a>
+                              </button><br />
                               <div className="banner_link">
                                    <div className="links">
                                         <h5>FIND WITH ME</h5>
@@ -50,12 +55,11 @@ function Home() {
                                    </div>
                               </div>
                          </div>
-                         <div className="banner_img col-lg-5 col-md-5 col-sm-8 text-sm-center"><img src={image} alt="img" /></div>
+                         <div className="banner_img col-lg-5 col-md-5 last_img">
+                              <img src={image} alt="img" />
+                         </div>
                     </div>
                </div>
-               {/* <div className="arrow">
-                    <a href="#home"><i className="bi bi-arrow-up"></i></a>
-               </div> */}
           </div>
      );
 };
